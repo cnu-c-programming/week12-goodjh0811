@@ -9,11 +9,12 @@ int main(int argc, const char* argv[]) {
     }
     char line[100];
     int sum = 0;
+    int num;
     char extra;
 
     while (fgets(line, sizeof(line), fp) != NULL) {
-        if (sscanf(line, "%d %c", &sum, &extra) == 1) {
-            sum += sum;
+        if (sscanf(line, "%d %c", &num, &extra) == 1) {
+            sum += num;
         } else {
             fprintf(stderr, "invalid input: %s", line);
         }
